@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="main-content"
+      style="
+        display: relative;
+        height: 2000px;
+        margin-top: -20px;
+        height: 100vh;
+      "
+    >
+      <div
+        class="GOM"
+        style="
+          margin-left: 3rem;
+          background-image: url(./images/maldives.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          height: 300px;
+          width: 600px;
+          font-size: 30px;
+          padding: 50px;
+          cursor: pointer;
+        "
+        onclick="JavaScript:timedRedirect()"
+      >
+        <strong
+          class="red"
+          style="color: red; position: absolute; top: 150px; left: 300px;"
+          >CLICK ON ME</strong
+        >
+      </div>
+      <div
+        class="red"
+        style="
+          margin-top: 3rem;
+          background-image: url('./images/rainbow.jpg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          height: 300px;
+          width: 600px;
+          font-size: 30px;
+          padding: 50px;
+          margin-left: 45%;
+        "
+      ></div>
+    </div>
+    <script>
+      redirectTime = "1500";
+      redirectURL = "one-project.html";
+      function timedRedirect() {
+        $(".GOM").animate(
+          {
+            width: "550px",
+          },
+          1500
+        );
+        $(".red").fadeOut(2500);
+        setTimeout("location.href = redirectURL;", redirectTime);
+      }
+    </script>
+  </body>
+</html>
